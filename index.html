@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>REHA Apps — Smart Marketplace Integrations</title>
+  <meta name="description"
+    content="REHA Apps builds professional marketplace integrations that connect your favorite tools. HubSpot, Slack, WhatsApp & more." />
+  <meta property="og:title" content="REHA Apps — Smart Marketplace Integrations" />
+  <meta property="og:description" content="Professional integrations that connect HubSpot, Slack, WhatsApp & more." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="assets/REHA_logo.png" type="image/png" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: { DEFAULT: '#00D4AA', dark: '#0D7377', light: '#00F5C8' },
+            surface: { DEFAULT: '#111827', dark: '#0A0E1A', card: 'rgba(255,255,255,0.04)' },
+          },
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body class="bg-surface-dark text-gray-100 font-sans antialiased overflow-x-hidden">
+
+  <!-- ===== Navbar ===== -->
+  <nav id="navbar" class="fixed top-0 inset-x-0 z-50 transition-all duration-300">
+    <div class="max-w-6xl mx-auto px-6 py-4">
+      <!-- Desktop Navbar: 3-column layout -->
+      <div class="hidden md:grid grid-cols-3 items-center">
+        <!-- Left Link Group -->
+        <div class="flex items-center gap-8">
+          <a href="#integrations"
+            class="text-sm font-medium text-gray-400 hover:text-white transition-colors">Integrations</a>
+          <a href="#about" class="text-sm font-medium text-gray-400 hover:text-white transition-colors">About</a>
+        </div>
+
+        <!-- Center Brand -->
+        <div class="flex justify-center">
+          <a href="index.html" class="flex items-center gap-2 text-xl font-extrabold tracking-tight group">
+            <img src="assets/REHA_logo.png" alt="REHA" class="w-10 h-10 object-contain -mt-0.5" />
+            REHA Apps
+          </a>
+        </div>
+
+        <!-- Right Link/CTA Group -->
+        <div class="flex items-center justify-end gap-8">
+          <a href="#contact" class="text-sm font-medium text-gray-400 hover:text-white transition-colors">Contact</a>
+          <a href="#integrations"
+            class="px-5 py-2.5 text-sm font-semibold rounded-full bg-gradient-to-r from-brand-dark to-brand text-white shadow-lg shadow-brand/30 hover:-translate-y-0.5 hover:shadow-brand/50 transition-all">Get
+            Started</a>
+        </div>
+      </div>
+
+      <!-- Mobile Navbar: Simple justified layout -->
+      <div class="md:hidden flex items-center justify-between">
+        <button id="nav-toggle" class="flex flex-col gap-1.5 p-1" aria-label="Menu">
+          <span class="w-6 h-0.5 bg-white rounded"></span>
+          <span class="w-6 h-0.5 bg-white rounded"></span>
+          <span class="w-6 h-0.5 bg-white rounded"></span>
+        </button>
+        <a href="index.html" class="flex items-center gap-2 text-lg font-extrabold tracking-tight">
+          <img src="assets/REHA_logo.png" alt="REHA" class="w-8 h-8 object-contain" />
+          REHA Apps
+        </a>
+        <div class="w-8"></div> <!-- Spacer to keep brand centered on mobile -->
+      </div>
+    </div>
+    <!-- Mobile menu -->
+    <div id="mobile-menu"
+      class="hidden md:hidden fixed inset-0 bg-surface-dark/98 backdrop-blur-xl z-[999] flex flex-col items-center justify-center gap-8">
+      <a href="#integrations" class="text-lg font-medium text-gray-300 hover:text-white mobile-link">Integrations</a>
+      <a href="#about" class="text-lg font-medium text-gray-300 hover:text-white mobile-link">About</a>
+      <a href="#contact" class="text-lg font-medium text-gray-300 hover:text-white mobile-link">Contact</a>
+      <a href="#integrations"
+        class="px-6 py-3 font-semibold rounded-full bg-gradient-to-r from-brand-dark to-brand text-white mobile-link">Get
+        Started</a>
+    </div>
+  </nav>
+
+  <!-- ===== Hero ===== -->
+  <section
+    class="relative min-h-screen flex items-center pt-20 overflow-hidden bg-gradient-to-br from-surface-dark via-[#152028] to-[#121e2e]">
+    <div class="orb orb--1"></div>
+    <div class="orb orb--2"></div>
+    <div class="orb orb--3"></div>
+    <div class="max-w-6xl mx-auto px-6 relative z-10">
+      <div class="max-w-2xl">
+        <div
+          class="inline-flex items-center gap-2 px-4 py-1.5 mb-8 rounded-full text-sm font-medium text-brand bg-brand/10 border border-brand/20">
+          ⚡ Marketplace-ready integrations
+        </div>
+        <h1 class="text-5xl md:text-7xl font-black leading-[1.05] tracking-tight mb-6">
+          We Build<br />
+          <span class="gradient-text">Smart Integrations</span><br />
+          for Your Business
+        </h1>
+        <p class="text-lg text-gray-400 leading-relaxed mb-10 max-w-xl">
+          REHA Apps develops professional marketplace integrations that connect
+          your favorite tools — making workflows seamless, teams faster, and
+          data unified across platforms.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="#integrations"
+            class="inline-flex items-center gap-2 px-7 py-3.5 rounded-full font-semibold bg-gradient-to-r from-brand-dark to-brand text-white shadow-lg shadow-brand/30 hover:-translate-y-0.5 hover:shadow-brand/50 transition-all">
+            🚀 Explore Integrations
+          </a>
+          <a href="#about"
+            class="inline-flex items-center gap-2 px-7 py-3.5 rounded-full font-semibold border border-white/15 text-white hover:border-brand hover:bg-brand/10 hover:-translate-y-0.5 transition-all">
+            💡 Learn More
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Stats ===== -->
+  <section class="border-y border-white/[0.06] bg-white/[0.01] py-12">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div class="reveal">
+          <div class="text-3xl md:text-4xl font-extrabold gradient-text" data-count="5" data-suffix="+">0+</div>
+          <div class="text-xs font-medium text-gray-500 uppercase tracking-widest mt-1">Integrations Built</div>
+        </div>
+        <div class="reveal reveal-delay-1">
+          <div class="text-3xl md:text-4xl font-extrabold gradient-text" data-count="200" data-suffix="+">0+</div>
+          <div class="text-xs font-medium text-gray-500 uppercase tracking-widest mt-1">Teams Served</div>
+        </div>
+        <div class="reveal reveal-delay-2">
+          <div class="text-3xl md:text-4xl font-extrabold gradient-text" data-count="99" data-suffix=".9%">0%</div>
+          <div class="text-xs font-medium text-gray-500 uppercase tracking-widest mt-1">Uptime</div>
+        </div>
+        <div class="reveal reveal-delay-3">
+          <div class="text-3xl md:text-4xl font-extrabold gradient-text" data-count="50" data-suffix="K+">0</div>
+          <div class="text-xs font-medium text-gray-500 uppercase tracking-widest mt-1">Messages Synced</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Integrations ===== -->
+  <section id="integrations" class="py-24 relative">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <span class="text-xs font-semibold tracking-[3px] uppercase text-brand reveal">Our Products</span>
+        <h2 class="text-3xl md:text-5xl font-extrabold mt-3 mb-4 reveal">Available Integrations</h2>
+        <p class="text-gray-400 text-lg max-w-xl mx-auto reveal">
+          Plug-and-play connectors for the tools your team already uses.
+          Install in minutes, configure once, transform workflows.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- HubSpot CRM + Slack -->
+        <a href="hubspot-slack.html"
+          class="group relative glass-card bg-white/[0.03] border border-white/[0.06] rounded-2xl p-8 hover:bg-white/[0.06] hover:border-white/[0.12] hover:-translate-y-1.5 transition-all duration-300 overflow-hidden reveal reveal-delay-1">
+          <span
+            class="absolute top-6 right-6 text-gray-600 group-hover:text-brand group-hover:translate-x-1 transition-all text-xl">→</span>
+          <div class="flex items-center gap-3 mb-5">
+            <div class="w-12 h-12 rounded-xl bg-orange-500/10 flex items-center justify-center"><svg width="28"
+                height="28" viewBox="0 0 512 512" fill="#FF7A59">
+                <path
+                  d="M394.7 243.5v-74.3c17.8-8.9 30-27.4 30-48.7 0-30.2-24.5-54.6-54.6-54.6-30.2 0-54.6 24.5-54.6 54.6 0 21.3 12.2 39.8 30 48.7v74.3c-23.9 5.5-45.7 16.8-63.5 32.7l-167-129.8c1.2-5.7 1.9-11.6 1.9-17.7C117 59 83.8 25.7 44.1 25.7 4.4 25.7-28.8 59-28.8 98.7c0 39.7 33.2 73 72.9 73 14.8 0 28.5-4.5 39.9-12.2l163.5 127c-14.7 23.4-23.3 51-23.3 80.7 0 84.1 68.1 152.2 152.2 152.2s152.2-68.1 152.2-152.2c0-75.5-55-138.2-127-150.7zm-18.6 237.2c-47.8 0-86.5-38.7-86.5-86.5s38.7-86.5 86.5-86.5 86.5 38.7 86.5 86.5-38.7 86.5-86.5 86.5z" />
+              </svg></div>
+            <span class="text-gray-600 text-lg">⇄</span>
+            <div class="w-12 h-12 rounded-xl bg-purple-900/30 flex items-center justify-center"><svg width="28"
+                height="28" viewBox="0 0 24 24">
+                <path
+                  d="M5.042 15.165a2.528 2.528 0 0 1-2.52 2.523A2.528 2.528 0 0 1 0 15.165a2.527 2.527 0 0 1 2.522-2.52h2.52v2.52zm1.271 0a2.527 2.527 0 0 1 2.521-2.52 2.527 2.527 0 0 1 2.521 2.52v6.313A2.528 2.528 0 0 1 8.834 24a2.528 2.528 0 0 1-2.521-2.522v-6.313z"
+                  fill="#E01E5A" />
+                <path
+                  d="M8.834 5.042a2.528 2.528 0 0 1-2.521-2.52A2.528 2.528 0 0 1 8.834 0a2.528 2.528 0 0 1 2.521 2.522v2.52H8.834zm0 1.271a2.528 2.528 0 0 1 2.521 2.521 2.528 2.528 0 0 1-2.521 2.521H2.522A2.528 2.528 0 0 1 0 8.834a2.528 2.528 0 0 1 2.522-2.521h6.312z"
+                  fill="#36C5F0" />
+                <path
+                  d="M18.956 8.834a2.528 2.528 0 0 1 2.522-2.521A2.528 2.528 0 0 1 24 8.834a2.528 2.528 0 0 1-2.522 2.521h-2.522V8.834zm-1.27 0a2.528 2.528 0 0 1-2.523 2.521 2.527 2.527 0 0 1-2.52-2.521V2.522A2.527 2.527 0 0 1 15.165 0a2.528 2.528 0 0 1 2.523 2.522v6.312z"
+                  fill="#2EB67D" />
+                <path
+                  d="M15.165 18.956a2.528 2.528 0 0 1 2.523 2.522A2.528 2.528 0 0 1 15.165 24a2.527 2.527 0 0 1-2.52-2.522v-2.522h2.52zm0-1.27a2.527 2.527 0 0 1-2.52-2.523 2.526 2.526 0 0 1 2.52-2.52h6.313A2.527 2.527 0 0 1 24 15.165a2.528 2.528 0 0 1-2.522 2.523h-6.313z"
+                  fill="#ECB22E" />
+              </svg></div>
+          </div>
+          <h3 class="text-xl font-bold mb-2">HubSpot CRM × Slack</h3>
+          <p class="text-sm text-gray-400 leading-relaxed mb-5">
+            Search contacts, close deals, and manage tickets — all from Slack.
+            AI-powered insights, rich cards, slash commands, and link unfurling.
+          </p>
+          <span
+            class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold text-brand bg-brand/10 border border-brand/20">
+            <span class="w-2 h-2 rounded-full bg-brand"></span> Live
+          </span>
+        </a>
+
+        <!-- HubSpot CRM + WhatsApp -->
+        <div
+          class="relative glass-card bg-white/[0.03] border border-white/[0.06] rounded-2xl p-8 opacity-60 reveal reveal-delay-2 overflow-hidden">
+          <span class="absolute top-6 right-6 text-gray-700 text-xl">→</span>
+          <div class="flex items-center gap-3 mb-5">
+            <div class="w-12 h-12 rounded-xl bg-orange-500/10 flex items-center justify-center"><svg width="28"
+                height="28" viewBox="0 0 512 512" fill="#FF7A59">
+                <path
+                  d="M394.7 243.5v-74.3c17.8-8.9 30-27.4 30-48.7 0-30.2-24.5-54.6-54.6-54.6-30.2 0-54.6 24.5-54.6 54.6 0 21.3 12.2 39.8 30 48.7v74.3c-23.9 5.5-45.7 16.8-63.5 32.7l-167-129.8c1.2-5.7 1.9-11.6 1.9-17.7C117 59 83.8 25.7 44.1 25.7 4.4 25.7-28.8 59-28.8 98.7c0 39.7 33.2 73 72.9 73 14.8 0 28.5-4.5 39.9-12.2l163.5 127c-14.7 23.4-23.3 51-23.3 80.7 0 84.1 68.1 152.2 152.2 152.2s152.2-68.1 152.2-152.2c0-75.5-55-138.2-127-150.7zm-18.6 237.2c-47.8 0-86.5-38.7-86.5-86.5s38.7-86.5 86.5-86.5 86.5 38.7 86.5 86.5-38.7 86.5-86.5 86.5z" />
+              </svg></div>
+            <span class="text-gray-600 text-lg">⇄</span>
+            <div class="w-12 h-12 rounded-xl bg-green-500/10 flex items-center justify-center"><svg width="28"
+                height="28" viewBox="0 0 24 24" fill="#25D366">
+                <path
+                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z" />
+              </svg></div>
+          </div>
+          <h3 class="text-xl font-bold mb-2">HubSpot CRM × WhatsApp</h3>
+          <p class="text-sm text-gray-400 leading-relaxed mb-5">
+            Sync WhatsApp conversations with HubSpot contacts and tickets.
+            Auto-log messages, send templates, and manage leads.
+          </p>
+          <span
+            class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold text-yellow-400 bg-yellow-400/10 border border-yellow-400/20">
+            🔜 Coming Soon
+          </span>
+        </div>
+
+        <!-- HubSpot + MS Teams -->
+        <div
+          class="relative glass-card bg-white/[0.03] border border-white/[0.06] rounded-2xl p-8 opacity-60 reveal reveal-delay-3 overflow-hidden">
+          <span class="absolute top-6 right-6 text-gray-700 text-xl">→</span>
+          <div class="flex items-center gap-3 mb-5">
+            <div class="w-12 h-12 rounded-xl bg-orange-500/10 flex items-center justify-center"><svg width="28"
+                height="28" viewBox="0 0 512 512" fill="#FF7A59">
+                <path
+                  d="M394.7 243.5v-74.3c17.8-8.9 30-27.4 30-48.7 0-30.2-24.5-54.6-54.6-54.6-30.2 0-54.6 24.5-54.6 54.6 0 21.3 12.2 39.8 30 48.7v74.3c-23.9 5.5-45.7 16.8-63.5 32.7l-167-129.8c1.2-5.7 1.9-11.6 1.9-17.7C117 59 83.8 25.7 44.1 25.7 4.4 25.7-28.8 59-28.8 98.7c0 39.7 33.2 73 72.9 73 14.8 0 28.5-4.5 39.9-12.2l163.5 127c-14.7 23.4-23.3 51-23.3 80.7 0 84.1 68.1 152.2 152.2 152.2s152.2-68.1 152.2-152.2c0-75.5-55-138.2-127-150.7zm-18.6 237.2c-47.8 0-86.5-38.7-86.5-86.5s38.7-86.5 86.5-86.5 86.5 38.7 86.5 86.5-38.7 86.5-86.5 86.5z" />
+              </svg></div>
+            <span class="text-gray-600 text-lg">⇄</span>
+            <div class="w-12 h-12 rounded-xl bg-indigo-500/10 flex items-center justify-center"><svg width="28"
+                height="28" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M20.625 7.125h-3.75V4.5a1.125 1.125 0 0 0-1.125-1.125h-9A1.125 1.125 0 0 0 5.625 4.5v10.125a1.125 1.125 0 0 0 1.125 1.125h3.75v3.375a.75.75 0 0 0 .75.75h9.375a.75.75 0 0 0 .75-.75V7.875a.75.75 0 0 0-.75-.75z"
+                  fill="#5059C9" />
+                <circle cx="17.25" cy="4.5" r="2.25" fill="#5059C9" />
+                <path d="M11.25 14.625V7.125H5.625V4.5h11.25v2.625h-3.75v7.5H11.25z" fill="#7B83EB" />
+                <circle cx="9" cy="3" r="2.625" fill="#7B83EB" />
+                <rect x="3" y="6.75" width="9" height="9" rx="0.75" fill="#4F52B2" />
+                <path d="M9.75 9.375H7.5v3.375h-.75V9.375H4.5v-.75h5.25v.75z" fill="white" />
+              </svg></div>
+          </div>
+          <h3 class="text-xl font-bold mb-2">HubSpot CRM × MS Teams</h3>
+          <p class="text-sm text-gray-400 leading-relaxed mb-5">
+            Bring HubSpot CRM data into Microsoft Teams. Search records,
+            get deal notifications, and collaborate on tickets in channels.
+          </p>
+          <span
+            class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold text-yellow-400 bg-yellow-400/10 border border-yellow-400/20">
+            🔜 Coming Soon
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== About ===== -->
+  <section id="about" class="py-24 relative">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div class="reveal">
+          <span class="text-xs font-semibold tracking-[3px] uppercase text-brand">Why REHA Apps</span>
+          <h2 class="text-3xl md:text-5xl font-extrabold mt-3 mb-4 leading-tight">Built for Teams<br />Who Move Fast
+          </h2>
+          <p class="text-gray-400 text-lg leading-relaxed mb-10">
+            We build integrations the way they should be — reliable, beautiful,
+            and intelligent. No bloated platforms, no unnecessary complexity.
+          </p>
+          <div class="space-y-6">
+            <div class="flex gap-4">
+              <div class="w-10 h-10 min-w-[40px] rounded-lg bg-brand/10 flex items-center justify-center text-lg">⚡
+              </div>
+              <div>
+                <h4 class="font-semibold mb-0.5">Lightning Fast</h4>
+                <p class="text-sm text-gray-400">Async-first architecture. Sub-second response times across all
+                  integrations.</p>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <div class="w-10 h-10 min-w-[40px] rounded-lg bg-brand/10 flex items-center justify-center text-lg">🤖
+              </div>
+              <div>
+                <h4 class="font-semibold mb-0.5">AI-Powered</h4>
+                <p class="text-sm text-gray-400">Built-in AI insights — smart summaries, sentiment analysis, and
+                  next-best-action suggestions.</p>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <div class="w-10 h-10 min-w-[40px] rounded-lg bg-brand/10 flex items-center justify-center text-lg">🔒
+              </div>
+              <div>
+                <h4 class="font-semibold mb-0.5">Enterprise Secure</h4>
+                <p class="text-sm text-gray-400">OAuth 2.0, encrypted credentials, zero CRM data stored on our servers.
+                </p>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <div class="w-10 h-10 min-w-[40px] rounded-lg bg-brand/10 flex items-center justify-center text-lg">🧩
+              </div>
+              <div>
+                <h4 class="font-semibold mb-0.5">Marketplace Native</h4>
+                <p class="text-sm text-gray-400">Install from HubSpot or Slack app stores with one click.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Architecture diagram -->
+        <div class="reveal reveal-delay-2">
+          <div class="bg-white/[0.03] border border-white/[0.06] rounded-2xl p-8 space-y-4">
+            <div class="flex items-center gap-3 p-4 rounded-xl bg-orange-500/[0.06] border border-orange-500/10">
+              <svg width="24" height="24" viewBox="0 0 512 512" fill="#FF7A59">
+                <path
+                  d="M394.7 243.5v-74.3c17.8-8.9 30-27.4 30-48.7 0-30.2-24.5-54.6-54.6-54.6-30.2 0-54.6 24.5-54.6 54.6 0 21.3 12.2 39.8 30 48.7v74.3c-23.9 5.5-45.7 16.8-63.5 32.7l-167-129.8c1.2-5.7 1.9-11.6 1.9-17.7C117 59 83.8 25.7 44.1 25.7 4.4 25.7-28.8 59-28.8 98.7c0 39.7 33.2 73 72.9 73 14.8 0 28.5-4.5 39.9-12.2l163.5 127c-14.7 23.4-23.3 51-23.3 80.7 0 84.1 68.1 152.2 152.2 152.2s152.2-68.1 152.2-152.2c0-75.5-55-138.2-127-150.7zm-18.6 237.2c-47.8 0-86.5-38.7-86.5-86.5s38.7-86.5 86.5-86.5 86.5 38.7 86.5 86.5-38.7 86.5-86.5 86.5z" />
+              </svg>
+              <div>
+                <div class="font-semibold text-sm">HubSpot CRM</div>
+                <div class="text-xs text-gray-500">Contacts · Deals · Tickets · Tasks</div>
+              </div>
+            </div>
+            <div class="text-center text-gray-600 text-2xl">↕</div>
+            <div class="flex items-center gap-3 p-4 rounded-xl bg-brand/[0.06] border border-brand/10">
+              <span class="text-2xl">🔗</span>
+              <div>
+                <div class="font-semibold text-sm">REHA Connector</div>
+                <div class="text-xs text-gray-500">AI Insights · Smart Routing · Events</div>
+              </div>
+            </div>
+            <div class="text-center text-gray-600 text-2xl">↕</div>
+            <div class="grid grid-cols-3 gap-3">
+              <div class="flex items-center gap-2 p-3 rounded-xl bg-purple-900/10 border border-purple-900/20">
+                <svg width="16" height="16" viewBox="0 0 24 24">
+                  <path
+                    d="M5.042 15.165a2.528 2.528 0 0 1-2.52 2.523A2.528 2.528 0 0 1 0 15.165a2.527 2.527 0 0 1 2.522-2.52h2.52v2.52zm1.271 0a2.527 2.527 0 0 1 2.521-2.52 2.527 2.527 0 0 1 2.521 2.52v6.313A2.528 2.528 0 0 1 8.834 24a2.528 2.528 0 0 1-2.521-2.522v-6.313z"
+                    fill="#E01E5A" />
+                  <path
+                    d="M8.834 5.042a2.528 2.528 0 0 1-2.521-2.52A2.528 2.528 0 0 1 8.834 0a2.528 2.528 0 0 1 2.521 2.522v2.52H8.834zm0 1.271a2.528 2.528 0 0 1 2.521 2.521 2.528 2.528 0 0 1-2.521 2.521H2.522A2.528 2.528 0 0 1 0 8.834a2.528 2.528 0 0 1 2.522-2.521h6.312z"
+                    fill="#36C5F0" />
+                  <path
+                    d="M18.956 8.834a2.528 2.528 0 0 1 2.522-2.521A2.528 2.528 0 0 1 24 8.834a2.528 2.528 0 0 1-2.522 2.521h-2.522V8.834zm-1.27 0a2.528 2.528 0 0 1-2.523 2.521 2.527 2.527 0 0 1-2.52-2.521V2.522A2.527 2.527 0 0 1 15.165 0a2.528 2.528 0 0 1 2.523 2.522v6.312z"
+                    fill="#2EB67D" />
+                  <path
+                    d="M15.165 18.956a2.528 2.528 0 0 1 2.523 2.522A2.528 2.528 0 0 1 15.165 24a2.527 2.527 0 0 1-2.52-2.522v-2.522h2.52zm0-1.27a2.527 2.527 0 0 1-2.52-2.523 2.526 2.526 0 0 1 2.52-2.52h6.313A2.527 2.527 0 0 1 24 15.165a2.528 2.528 0 0 1-2.522 2.523h-6.313z"
+                    fill="#ECB22E" />
+                </svg><span class="text-xs font-medium">Slack</span>
+              </div>
+              <div class="flex items-center gap-2 p-3 rounded-xl bg-green-500/[0.06] border border-green-500/10">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="#25D366">
+                  <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z" />
+                </svg><span class="text-xs font-medium">WhatsApp</span>
+              </div>
+              <div class="flex items-center gap-2 p-3 rounded-xl bg-indigo-500/[0.06] border border-indigo-500/10">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M20.625 7.125h-3.75V4.5a1.125 1.125 0 0 0-1.125-1.125h-9A1.125 1.125 0 0 0 5.625 4.5v10.125a1.125 1.125 0 0 0 1.125 1.125h3.75v3.375a.75.75 0 0 0 .75.75h9.375a.75.75 0 0 0 .75-.75V7.875a.75.75 0 0 0-.75-.75z"
+                    fill="#5059C9" />
+                  <circle cx="17.25" cy="4.5" r="2.25" fill="#5059C9" />
+                  <path d="M11.25 14.625V7.125H5.625V4.5h11.25v2.625h-3.75v7.5H11.25z" fill="#7B83EB" />
+                  <circle cx="9" cy="3" r="2.625" fill="#7B83EB" />
+                  <rect x="3" y="6.75" width="9" height="9" rx="0.75" fill="#4F52B2" />
+                  <path d="M9.75 9.375H7.5v3.375h-.75V9.375H4.5v-.75h5.25v.75z" fill="white" />
+                </svg><span class="text-xs font-medium">Teams</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section id="contact" class="py-24 relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-brand/[0.04] to-brand-dark/[0.04] rounded-3xl"></div>
+    <div class="max-w-6xl mx-auto px-6 relative z-10 text-center">
+      <span class="text-xs font-semibold tracking-[3px] uppercase text-brand reveal">Get Started</span>
+      <h2 class="text-3xl md:text-5xl font-extrabold mt-3 mb-4 reveal">Ready to Connect<br />Your Tools?</h2>
+      <p class="text-gray-400 text-lg max-w-xl mx-auto mb-10 reveal">
+        Install our integrations in minutes. No credit card required.
+        Start with the free tier and upgrade when you're ready.
+      </p>
+      <div class="flex flex-wrap gap-4 justify-center reveal reveal-delay-1">
+        <a href="hubspot-slack.html"
+          class="inline-flex items-center gap-2 px-7 py-3.5 rounded-full font-semibold bg-gradient-to-r from-brand-dark to-brand text-white shadow-lg shadow-brand/30 hover:-translate-y-0.5 hover:shadow-brand/50 transition-all">
+          🚀 Start with HubSpot × Slack
+        </a>
+        <a href="mailto:hello@rehaapps.com"
+          class="inline-flex items-center gap-2 px-7 py-3.5 rounded-full font-semibold border border-white/15 text-white hover:border-brand hover:bg-brand/10 hover:-translate-y-0.5 transition-all">
+          ✉️ Contact Us
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="border-t border-white/[0.06] py-8">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
+      <a href="index.html" class="flex items-center gap-2 font-bold group">
+        <img src="assets/REHA_logo.png" alt="REHA" class="w-8 h-8 object-contain" />
+        REHA Apps
+      </a>
+      <div class="flex gap-8">
+        <a href="#integrations" class="text-sm text-gray-500 hover:text-white transition-colors">Integrations</a>
+        <a href="#about" class="text-sm text-gray-500 hover:text-white transition-colors">About</a>
+        <a href="privacy.html" class="text-sm text-gray-500 hover:text-white transition-colors">Privacy</a>
+        <a href="terms.html" class="text-sm text-gray-500 hover:text-white transition-colors">Terms</a>
+      </div>
+      <span class="text-xs text-gray-600">© 2026 REHA Apps. All rights reserved.</span>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>
