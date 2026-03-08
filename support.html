@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Support — REHA Apps</title>
+    <meta name="description" content="Support guide for REHA Apps integrations. Learn how to install and master our tools." />
+    <link rel="icon" href="assets/REHA_logo.png" type="image/png" />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: { DEFAULT: '#00D4AA', dark: '#0D7377', light: '#00F5C8' },
+                        surface: { DEFAULT: '#111827', dark: '#0A0E1A', card: 'rgba(255,255,255,0.04)' },
+                    },
+                    fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+        .gradient-text {
+            background: linear-gradient(135deg, #00F5C8, #00D4AA);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .support-content h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #fff;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            border-left: 4px solid #00D4AA;
+            padding-left: 1rem;
+        }
+
+        .support-content h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #fff;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .support-content p {
+            color: #9ca3af;
+            line-height: 1.7;
+            margin-bottom: 1.25rem;
+        }
+
+        .support-content ul {
+            list-style-type: disc;
+            margin-left: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: #9ca3af;
+        }
+
+        .support-content li {
+            margin-bottom: 0.75rem;
+        }
+
+        .support-content strong {
+            color: #fff;
+        }
+
+        .support-content code {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            color: #00F5C8;
+            font-family: monospace;
+        }
+    </style>
+</head>
+
+<body class="bg-surface-dark text-gray-100 font-sans antialiased overflow-x-hidden min-h-screen flex flex-col">
+
+    <!-- ===== Navbar (Minimal) ===== -->
+    <nav id="navbar" class="bg-surface-dark/80 backdrop-blur-md border-b border-white/5 sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-1 text-xl font-extrabold tracking-tight">
+                <img src="assets/REHA_logo.png" alt="REHA" class="w-10 h-10 object-contain" />
+                REHA Apps
+            </a>
+            <div class="flex items-center gap-6">
+                <a href="index.html"
+                    class="text-sm font-medium text-gray-400 hover:text-white transition-colors">Home</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== Content ===== -->
+    <main class="flex-grow py-20 px-6">
+        <div class="max-w-3xl mx-auto">
+            <div id="loading" class="text-center py-20">
+                <div class="w-12 h-12 border-4 border-brand border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+                <p class="text-gray-400">Loading support documentation...</p>
+            </div>
+
+            <div id="content" class="hidden">
+                <div class="mb-12">
+                    <h1 id="page-title" class="text-4xl md:text-5xl font-black mb-4"><span class="gradient-text">Support</span></h1>
+                    <p id="page-description" class="text-gray-400 text-lg"></p>
+                </div>
+                <div id="support-body" class="support-content"></div>
+            </div>
+
+            <div id="error" class="hidden text-center py-20">
+                <h1 class="text-3xl font-black mb-4">Support Page Not Found</h1>
+                <p class="text-gray-400 mb-8">We couldn't find the support documentation you were looking for.</p>
+                <a href="index.html" class="inline-block px-8 py-3 rounded-full bg-brand text-surface-dark font-bold hover:bg-brand-light transition-all">Return Home</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- ===== Footer ===== -->
+    <footer class="border-t border-white/[0.06] py-12">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+            <a href="index.html" class="flex items-center gap-1 font-bold group">
+                <img src="assets/REHA_logo.png" alt="REHA" class="w-8 h-8 object-contain" />
+                REHA Apps
+            </a>
+            <div class="flex gap-8">
+                <a href="pricing.html" class="text-sm text-gray-400 hover:text-white transition-colors">Pricing</a>
+                <a href="contact.html" class="text-sm text-gray-400 hover:text-white transition-colors">Contact</a>
+                <a href="privacy.html" class="text-sm text-gray-400 hover:text-white transition-colors">Privacy</a>
+                <a href="terms.html" class="text-sm text-gray-400 hover:text-white transition-colors">Terms</a>
+            </div>
+            <span class="text-xs text-gray-600">© 2026 REHA Apps. All rights reserved.</span>
+        </div>
+    </footer>
+
+    <script>
+        const SUPPORT_DATA = {
+            'hubspot-slack': {
+                title: 'HubSpot-Slack Support',
+                description: 'Everything you need to install and master the integration.',
+                body: `
+                    <p>Welcome to the REHA HubSpot-Slack Connector! This guide helps you get started with searching CRM records, creating tasks, and viewing AI insights directly from your Slack workspace.</p>
+
+                    <h2>🛠️ Installation</h2>
+                    
+                    <h3>From Slack Marketplace</h3>
+                    <ul>
+                        <li>Find <strong>HubSpot CRM Connector</strong> in the Slack App Directory.</li>
+                        <li>Click <strong>Add to Slack</strong>.</li>
+                        <li>Authorize the app in your workspace.</li>
+                        <li>Once installed, the bot will send a welcome message. Click <strong>Connect HubSpot</strong> to link your CRM account.</li>
+                    </ul>
+
+                    <h3>From HubSpot Marketplace</h3>
+                    <ul>
+                        <li>Search for <strong>REHA Apps</strong> in the HubSpot Ecosystem.</li>
+                        <li>Click <strong>Install App</strong>.</li>
+                        <li>Choose your HubSpot portal and grant permissions.</li>
+                        <li>You will be redirected to Slack to finalize the connection.</li>
+                    </ul>
+
+                    <h2>🚀 Key Features</h2>
+
+                    <h3>🔍 Smart Search</h3>
+                    <p>Use slash commands to find records without leaving Slack.</p>
+                    <ul>
+                        <li><code>/hs [query]</code> — Search across all record types.</li>
+                        <li><code>/hs-contacts [name/email]</code> — Search for contacts.</li>
+                        <li><code>/hs-deals [name]</code> — Search for active deals.</li>
+                        <li><code>/hs-tasks [name]</code> — Search for open tasks.</li>
+                    </ul>
+
+                    <h3>📝 Quick Actions</h3>
+                    <p>Create CRM records directly from a message or the search bar.</p>
+                    <ul>
+                        <li><strong>Shortcuts</strong>: Click the <code>+</code> (plus) icon in Slack or the "More Actions" menu on a message to "Create HubSpot Record."</li>
+                        <li><strong>Interactive Cards</strong>: After searching, use the "View in HubSpot" button or update record stages directly from the card.</li>
+                    </ul>
+
+                    <h3>🤖 AI Insights</h3>
+                    <p>The app automatically summarizes CRM records for you.</p>
+                    <ul>
+                        <li>When you share a HubSpot link in a channel, the app "unfurls" it with a concise summary.</li>
+                        <li>AI-generated insights appear on CRM cards to help you gather context instantly.</li>
+                    </ul>
+
+                    <h2>❓ FAQ</h2>
+                    <div class="space-y-6">
+                        <div>
+                            <strong>Q: I don't see my records after searching.</strong>
+                            <p>A: Ensure your HubSpot account is connected. Type <code>/hs-help</code> to see your connection status.</p>
+                        </div>
+                        <div>
+                            <strong>Q: Is my data safe?</strong>
+                            <p>A: Yes. We use industry-standard OAuth 2.0 and only access the data required to display your search results.</p>
+                        </div>
+                    </div>
+
+                    <div class="mt-12 p-6 rounded-2xl bg-white/5 border border-white/10">
+                        <h3 class="mt-0">Need more help?</h3>
+                        <p>Contact us at <a href="mailto:support@rehaapps.se" class="text-brand hover:underline font-medium">support@rehaapps.se</a> or visit our contact page.</p>
+                        <a href="contact.html" class="inline-block px-6 py-2 rounded-full bg-brand/10 text-brand font-semibold hover:bg-brand/20 transition-all">Go to Contact Page</a>
+                    </div>
+                `
+            }
+            // Add more apps here as they are developed
+        };
+
+        function loadSupport() {
+            const params = new URLSearchParams(window.location.search);
+            const app = params.get('app');
+            const data = SUPPORT_DATA[app];
+
+            const loading = document.getElementById('loading');
+            const content = document.getElementById('content');
+            const error = document.getElementById('error');
+
+            loading.classList.add('hidden');
+
+            if (data) {
+                document.title = `Support: ${data.title} — REHA Apps`;
+                document.getElementById('page-title').innerHTML = `<span class="gradient-text">${data.title}</span>`;
+                document.getElementById('page-description').textContent = data.description;
+                document.getElementById('support-body').innerHTML = data.body;
+                content.classList.remove('hidden');
+            } else {
+                error.classList.remove('hidden');
+            }
+        }
+
+        window.onload = loadSupport;
+    </script>
+</body>
+
+</html>
